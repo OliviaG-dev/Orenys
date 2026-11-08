@@ -22,9 +22,7 @@ COPY . .
 RUN pnpm --filter @orenys/domain build \
   && pnpm --filter @orenys/web build \
   && pnpm --filter @orenys/api exec prisma generate \
-  && pnpm --filter @orenys/api build \
-  && pnpm prune --prod \
-  && pnpm --filter @orenys/api exec prisma generate
+  && pnpm --filter @orenys/api build
 
 FROM node:22-bookworm-slim
 
