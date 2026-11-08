@@ -1,0 +1,29 @@
+{
+  "name": "orenys",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.11.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm --filter @orenys/domain build && pnpm -r --if-present --filter !@orenys/domain build",
+    "dev": "pnpm --filter @orenys/domain build && pnpm --parallel --filter @orenys/api --filter @orenys/web dev",
+    "lint": "eslint .",
+    "typecheck": "pnpm --filter @orenys/domain build && pnpm -r --if-present --filter !@orenys/domain typecheck",
+    "test": "node scripts/migrate-test.mjs && pnpm -r --if-present test",
+    "db:up": "node scripts/dev-postgres.mjs",
+    "db:migrate": "pnpm --filter @orenys/api db:migrate"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/pg": "^8.23.1",
+    "embedded-postgres": "18.6.0-beta.19",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "pg": "^8.23.1",
+    "typescript-eslint": "^8.72.1"
+  }
+}

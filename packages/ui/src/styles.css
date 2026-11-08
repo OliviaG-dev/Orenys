@@ -1,0 +1,135 @@
+@import "@fontsource/dm-serif-display/latin-400.css";
+@import "@fontsource/dm-serif-display/latin-ext-400.css";
+@import "@fontsource/source-serif-4/latin-400.css";
+@import "@fontsource/source-serif-4/latin-ext-400.css";
+@import "@fontsource/source-serif-4/latin-600.css";
+@import "@fontsource/source-serif-4/latin-ext-600.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-ext-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-ext-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-ext-600.css";
+
+:root {
+  --color-night: #211a35;
+  --color-violet: #51416f;
+  --color-gold: #d6b36a;
+  --color-dawn: #e9a98f;
+  --color-sage: #a6b59a;
+  --color-ivory: #f2ede3;
+  --color-surface: #f7f4ee;
+  --color-sunken: #e6dfd2;
+  --color-border: #ddd4c6;
+  --color-text: var(--color-night);
+  --color-text-muted: var(--color-violet);
+  --font-display: "DM Serif Display", "Times New Roman", serif;
+  --font-serif: "Source Serif 4", "Times New Roman", serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --radius-control: 6px;
+  --radius-card: 10px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+}
+
+.orenys-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-control);
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.orenys-button:focus-visible,
+.orenys-field input:focus-visible {
+  outline: 2px solid var(--color-violet);
+  outline-offset: 2px;
+}
+
+.orenys-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.orenys-button-primary {
+  background: var(--color-night);
+  color: var(--color-ivory);
+  border-color: var(--color-night);
+}
+
+.orenys-button-secondary {
+  background: transparent;
+  color: var(--color-night);
+  border-color: var(--color-night);
+}
+
+.orenys-button-ghost {
+  background: transparent;
+  color: var(--color-violet);
+  border-color: transparent;
+  padding-inline: var(--space-2);
+}
+
+.orenys-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.orenys-field label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-night);
+}
+
+.orenys-field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 1px solid #c9c0b2;
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-night);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.orenys-field input[aria-invalid="true"] {
+  border-color: var(--color-dawn);
+  border-left-width: 3px;
+}
+
+.orenys-field p {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-violet);
+}
+
+.orenys-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orenys-button {
+    transition: none;
+  }
+}

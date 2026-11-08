@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.git
+.data
+coverage
+**/.env
+**/.env.*
+*.log
+.DS_Store
+apps/api/generated

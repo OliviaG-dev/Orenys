@@ -1,0 +1,43 @@
+.hero {
+  padding-block: 48px 24px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 56px);
+  max-width: 14ch;
+  margin-top: 12px;
+}
+
+.eyebrow {
+  color: var(--color-violet);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.home-section .chapter-rail {
+  margin-top: 16px;
+}
+
+.home-section {
+  padding-block: 24px;
+}
+
+.home-section h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .page {
+    width: min(1120px, calc(100% - 32px));
+  }
+}
